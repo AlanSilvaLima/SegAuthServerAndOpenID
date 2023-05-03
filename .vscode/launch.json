@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AuthServerApplication<auth-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.davero.authserver.AuthServerApplication",
+            "projectName": "auth-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=46253 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=auth-server"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientServerApplication<client-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.davero.clientserver.ClientServerApplication",
+            "projectName": "client-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=46299 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=client-server"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ResourceServerApplication<resource-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.davero.resourceserver.ResourceServerApplication",
+            "projectName": "resource-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
